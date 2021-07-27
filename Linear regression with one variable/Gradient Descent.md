@@ -27,3 +27,13 @@
 - Regardless of the slope theta_1 eventually converges to its minimum value. The following graph shows that when the slope is negative, the value of theta_1 increases and when it is positive, the value of theta_1  decreases. ![alt_text](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/SMSIxKGUEeav5QpTGIv-Pg_ad3404010579ac16068105cfdc8e950a_Screenshot-2016-11-03-00.05.06.png?expiry=1627516800000&hmac=-F9pLMVObkSMfwF3eU2uejj_8RzOwdWsP5tBdiqaDRU)
 - On a side note, we should adjust our parameter  alpha α to ensure that the gradient descent algorithm converges in a reasonable time. Failure to converge or too much time to obtain the minimum value imply that our step size is wrong. ![alt_text](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/UJpiD6GWEeai9RKvXdDYag_3c3ad6625a2a4ec8456f421a2f4daf2e_Screenshot-2016-11-03-00.05.27.png?expiry=1627516800000&hmac=TLthhFSM3wx6H0cYvOZh4V5ipx_Wu9DN31rmrFx-TN0)
 ![alt_text](https://i.imgur.com/Prh42xf.jpg)
+
+## Gradient Descent For Linear Regression
+- When specifically applied to the case of linear regression, a new form of the gradient descent equation can be derived. We can substitute our actual cost function and our actual hypothesis function and modify the equation to:
+- ![alt_text](https://i.imgur.com/kcTHFBZ.jpg)
+- ![alt_text](https://i.imgur.com/6o03Pvm.jpg)
+- The point of all this is that if we start with a guess for our hypothesis and then repeatedly apply these gradient descent equations, our hypothesis will become more and more accurate.
+
+- So, this is simply gradient descent on the original cost function J. This method looks at every example in the entire training set on every step, and is called batch gradient descent. Note that, while gradient descent can be susceptible to local minima in general, the optimization problem we have posed here for linear regression has only one global, and no other local, optima; thus gradient descent always converges (assuming the learning rate α is not too large) to the global minimum. Indeed, J is a convex quadratic function. Here is an example of gradient descent as it is run to minimize a quadratic function.
+![alt_text](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/xAQBlqaaEeawbAp5ByfpEg_24e9420f16fdd758ccb7097788f879e7_Screenshot-2016-11-09-08.36.49.png?expiry=1627516800000&hmac=Rl4MYt9-GcKC8D9QjPCzxJv2wuHIMxcgjJ3surp6Nmo)
+- The ellipses shown above are the contours of a quadratic function. Also shown is the trajectory taken by gradient descent, which was initialized at (48,30). The x’s in the figure (joined by straight lines) mark the successive values of θ that gradient descent went through as it converged to its minimum.
