@@ -12,7 +12,7 @@ this function h is called a hypothesis.
 # Cost function:
 -We can measure the accuracy of our hypothesis function by using a cost function. This takes an average difference  of all the results of the hypothesis with inputs from x's and the actual output y's.
 See ride side:
-![alt text](https://images1.programmersought.com/153/44/443bbbcd75d1afd24eb23f5586b3e769.png)
+![alt text](https://images4.programmersought.com/760/a7/a716a4b7783155b0dea56f41acf96ef0.png)
 - To break it apart, it is 1/2 x where x is the mean of the squares of h0(x(^i)) - y^(i)or the difference between the predicted value and the actual value.
 - This function is otherwise called the "Squared error function", or "Mean squared error". The mean is halved  1/2 as a convenience for the computation of the gradient descent, as the derivative term of the square function will cancel out the 1/2 term. The following image summarizes what the cost function does: 
-![alt text](https://images4.programmersought.com/760/a7/a716a4b7783155b0dea56f41acf96ef0.png)
+
