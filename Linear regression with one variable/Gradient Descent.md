@@ -11,7 +11,8 @@
 - The way we do this is by taking the derivative (the tangential line to a function) of our cost function. The slope of the tangent is the derivative at that point and it will give us a direction to move towards. We make steps down the cost function in the direction with the steepest descent. The size of each step is determined by the parameter α, which is called the learning rate. 
 - For example, the distance between each 'star' in the graph above represents a step determined by our parameter α. A smaller α would result in a smaller step and a larger α results in a larger step. The direction in which the step is taken is determined by the partial derivative of J(theta_0,theta_1). Depending on where one starts on the graph, one could end up at different points. The image above shows us two different starting points that end up in two different places. 
 - So if you had started the first point, you would've wound up at left local optimum, but if you started just at a slightly different location, you would've wound up at a very different local optimum.
-- The gradient descent algorithm is: 
+
+ ## The gradient descent algorithm formula: 
 - ![alt_text](https://i.imgur.com/W3RX6HA.jpg)
 - := is the assignment operator.  If a := b  this means in computers take the value in b and use it overwrite whatever value is a. (Whereas in contrast, if I use the equal sign and I write a equals b, then this is a truth assertion)
 - This alpha is the learning rate
