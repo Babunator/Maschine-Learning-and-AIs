@@ -28,10 +28,16 @@
 - On a side note, we should adjust our parameter  alpha α to ensure that the gradient descent algorithm converges in a reasonable time. Failure to converge or too much time to obtain the minimum value imply that our step size is wrong. ![alt_text](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/UJpiD6GWEeai9RKvXdDYag_3c3ad6625a2a4ec8456f421a2f4daf2e_Screenshot-2016-11-03-00.05.27.png?expiry=1627516800000&hmac=TLthhFSM3wx6H0cYvOZh4V5ipx_Wu9DN31rmrFx-TN0)
 ![alt_text](https://i.imgur.com/Prh42xf.jpg)
 
+
 ## Gradient Descent For Linear Regression
 - When specifically applied to the case of linear regression, a new form of the gradient descent equation can be derived. We can substitute our actual cost function and our actual hypothesis function and modify the equation to:
-- ![alt_text](https://i.imgur.com/kcTHFBZ.jpg)
-- ![alt_text](https://i.imgur.com/6o03Pvm.jpg)
+- In order to apply gradient descent, the key term we need is the derivative term. So you need to figure out what is this partial derivative term and plugging in the definition of the cause function j.
+![alt_text](https://i.imgur.com/qWbCInT.jpg)
+- After some simplifying:
+![alt_text](https://i.imgur.com/B2cCTcM.jpg)
+-We get the linear regression algorithm:
+![alt_text](https://i.imgur.com/kcTHFBZ.jpg)
+![alt_text](https://i.imgur.com/6o03Pvm.jpg)
 - The point of all this is that if we start with a guess for our hypothesis and then repeatedly apply these gradient descent equations, our hypothesis will become more and more accurate.
 
 - So, this is simply gradient descent on the original cost function J. This method looks at every example in the entire training set on every step, and is called batch gradient descent. Note that, while gradient descent can be susceptible to local minima in general, the optimization problem we have posed here for linear regression has only one global, and no other local, optima; thus gradient descent always converges (assuming the learning rate α is not too large) to the global minimum. Indeed, J is a convex quadratic function. Here is an example of gradient descent as it is run to minimize a quadratic function.
