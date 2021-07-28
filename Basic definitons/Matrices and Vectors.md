@@ -23,3 +23,18 @@ Notation and terms:
 - "Scalar" means that an object is a single value, not a vector or matrix.
 - R refers to the set of scalar real numbers.
 - R^n refers to the set of n-dimensional vectors of real numbers.
+
+# Addition and Scalar Multiplication
+![alt_text](https://i.imgur.com/fOROovP.png)
+
+# Matrix-Vector Multiplication
+![alt_text](https://i.imgur.com/h5Uhecn.png)
+
+# Matrix-Matrix Multiplication
+![alt_text](https://i.imgur.com/XF2ktry.png)
+
+# Matrix Multiplication Properties
+![alt_text](https://i.imgur.com/SzYFWCz.png)
+
+# Inverse and Transpose
+![alt_text](https://i.imgur.com/0mnaoIS.png)
