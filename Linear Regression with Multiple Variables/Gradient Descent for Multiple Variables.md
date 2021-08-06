@@ -81,8 +81,8 @@ If your learning rate alpha is small enough, then J(theta) should decrease on ev
 But of course, you also don't want your learning rate to be too small because if you do that then the gradient descent can be slow to converge.
 \
 Summary:\
-If \α is too small: slow convergence. \
-If \α is too large: J(theta) may not decrease on every iteration and thus may not converge.\
+If α is too small: slow convergence. \
+If α is too large: J(theta) may not decrease on every iteration and thus may not converge.\
 In order to debug all of these things, often plotting that J(theta) as a function of the number of iterations can help you figure out what's going on.\
 E.g. Try running gradient descent with a range of values for alpha, like 0.001, 0.003, 0.01, 0.03, 0.1, 0,3, 1 ....\
 \
@@ -99,7 +99,7 @@ So then maybe we might choose a different polynomial model and choose to use ins
 ![alt_text](https://imgur.com/GZ16sMm)\
 To predict the price of a house:  theta 0 plus, theta 1 times the size of the house plus, theta 2 times the square size of the house plus, theta 3 times the cube of the size of the house raises that third term. \
 In a cubic function feature scaling becomes increasingly important.\
-Exxample square root function:\
+Exxample square root function:
 ![alt_text](https://imgur.com/nLM35KR)
 ## Polynomial Regression
 ![alt_text](https://imgur.com/oimxXaF)
