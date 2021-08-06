@@ -86,7 +86,7 @@ If α is too large: J(theta) may not decrease on every iteration and thus may no
 In order to debug all of these things, often plotting that J(theta) as a function of the number of iterations can help you figure out what's going on.\
 E.g. Try running gradient descent with a range of values for alpha, like 0.001, 0.003, 0.01, 0.03, 0.1, 0,3, 1 ....\
 \
-# Features and Polynomial Regression\
+# Features and Polynomial Regression
 We can improve our features and the form of our hypothesis function in a couple different ways.
 
 We can combine multiple features into one. For example, we can combine x_1 and x_2 into a new feature x_3 by taking x_1 ⋅ x_2x \
