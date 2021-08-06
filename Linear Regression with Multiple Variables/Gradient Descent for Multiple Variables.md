@@ -85,3 +85,21 @@ If \α is too small: slow convergence. \
 If \α is too large: J(theta) may not decrease on every iteration and thus may not converge.\
 In order to debug all of these things, often plotting that J(theta) as a function of the number of iterations can help you figure out what's going on.\
 E.g. Try running gradient descent with a range of values for alpha, like 0.001, 0.003, 0.01, 0.03, 0.1, 0,3, 1 ....\
+\
+# Features and Polynomial Regression\
+We can improve our features and the form of our hypothesis function in a couple different ways.
+
+We can combine multiple features into one. For example, we can combine x_1 and x_2 into a new feature x_3 by taking x_1 ⋅ x_2x \
+e.g:\
+![alt_text](https://imgur.com/OMHIsNS)\
+Let's say you have a housing price data set. Then there are a few different models you might fit to this. \
+One thing you could do is fit a quadratic model, where you think the size and the price is a quadratic function.\
+But then you may decide that your quadratic model doesn't make sense because of a quadratic function, eventually this function comes back down and well, we don't think housing prices should go down when the size goes up too high.\
+So then maybe we might choose a different polynomial model and choose to use instead a cubic function.
+![alt_text](https://imgur.com/GZ16sMm)\
+To predict the price of a house:  theta 0 plus, theta 1 times the size of the house plus, theta 2 times the square size of the house plus, theta 3 times the cube of the size of the house raises that third term. \
+In a cubic function feature scaling becomes increasingly important.\
+Exxample square root function:\
+![alt_text](https://imgur.com/nLM35KR)
+## Polynomial Regression
+![alt_text](https://imgur.com/oimxXaF)
