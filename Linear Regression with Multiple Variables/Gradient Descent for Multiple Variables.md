@@ -99,7 +99,7 @@ So then maybe we might choose a different polynomial model and choose to use ins
 ![alt_text](https://imgur.com/GZ16sMm.png)\
 To predict the price of a house:  theta 0 plus, theta 1 times the size of the house plus, theta 2 times the square size of the house plus, theta 3 times the cube of the size of the house raises that third term. \
 In a cubic function feature scaling becomes increasingly important.\
-Exxample square root function:
+Example square root function:\
 ![alt_text](https://imgur.com/nLM35KR.png)
 ## Polynomial Regression
 ![alt_text](https://i.imgur.com/oimxXaF.png)
