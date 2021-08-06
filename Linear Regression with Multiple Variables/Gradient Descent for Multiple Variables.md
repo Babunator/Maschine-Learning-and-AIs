@@ -28,15 +28,23 @@ The gradient descent equation itself is generally the same form; we just have to
 # Gradient Descent - Feature Scaling
 
 We can speed up gradient descent by having each of our input values in roughly the same range. This is because θ will descend quickly on small ranges and slowly on large ranges, and so will oscillate inefficiently down to the optimum when the variables are very uneven.\
+
 The way to prevent this is to modify the ranges of our input variables so that they are all roughly the same. Ideally:\
 ![alt_text](https://i.imgur.com/TSOwLUt.png)
-
+Example: If you plot the contours of the function J of parameters theta zero, theta one and theta two.(for now we can ignore theta Zero).
+If x1 can take on a much larger range of values than x2.  The contours of the cause function J of theta can take on this very tall and skinny elliptical shape.\
+if you run gradient descents on this costfunction, your gradients may end up taking a long time and can oscillate back and forth and take a long time before it can finally find its way to the global minimum.\
+![alt_text](https://i.imgur.com/ysCabFZ.png) \
+n these settings, a useful thing to do is to scale the features.\
+If you instead define the feature X one to be the size of the house divided by two thousand, and define X two to be maybe the number of bedrooms divided by five, then the conture of the cost function is much less skewed so the contours may look more like circles.\
+And if you run gradient descent on a cost function you can find a much more direct path to the global minimum.\
+![alt_text](https://i.imgur.com/MdsSNtp.png)
 These aren't exact requirements; we are only trying to speed things up. The goal is to get all input variables into roughly one of these ranges, give or take a few.\
 Two techniques to help with this are feature scaling and mean normalization. Feature scaling involves dividing the input values by the range (i.e. the maximum value minus the minimum value) of the input variable, resulting in a new range of just 1. Mean normalization involves subtracting the average value for an input variable from the values for that input variable resulting in a new average value for the input variable of just zero. To implement both of these techniques, adjust your input values as shown in this formula:
 ![alt_text](https://i.imgur.com/I4JUTBm.png)
 
 Where μ_i is the average of all the values for feature (i) and s_i is the range of values (max - min), or s_is is the standard deviation.\
-Note that dividing by the range, or dividing by the standard deviation, give different results. \
+Note that dividing by the range, or dividing by the standard deviation, give different results.\
 
 For example, if x_i represents housing prices with a range of 100 to 2000  and a mean value of 1000, then:\
 ![alt_text](https://i.imgur.com/JsfvBIZ.png)
