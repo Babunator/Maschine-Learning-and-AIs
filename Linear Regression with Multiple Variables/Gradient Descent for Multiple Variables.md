@@ -26,7 +26,7 @@ The gradient descent equation itself is generally the same form; we just have to
 ![alt_text](https://i.imgur.com/wBzoSHE.png)\
 
 # Gradient Descent - Feature Scaling
-
+\
 We can speed up gradient descent by having each of our input values in roughly the same range. This is because θ will descend quickly on small ranges and slowly on large ranges, and so will oscillate inefficiently down to the optimum when the variables are very uneven.\
 
 The way to prevent this is to modify the ranges of our input variables so that they are all roughly the same. Ideally:\
@@ -49,3 +49,39 @@ Note that dividing by the range, or dividing by the standard deviation, give dif
 
 For example, if x_i represents housing prices with a range of 100 to 2000  and a mean value of 1000, then:\
 ![alt_text](https://i.imgur.com/JsfvBIZ.png)
+\
+# Gradient Descent - Learning Rate
+\
+Debugging gradient descent. Make a plot with number of iterations on the x-axis. Now plot the cost function, J(θ) over the number of iterations of gradient descent. If J(θ) ever increases, then you probably need to decrease α.\
+\
+The job of gradient descent is to find the value of theta for you that hopefully minimizes the cost function J(theta).\
+To make sure that gradient descent is working correctly you can plot the cost function J(theta) as gradient descent runs.\
+So the x axis here is a number of iterations of gradient descent and as gradient descent runs you hopefully get a plot liek this:\
+![alt_text](https://i.imgur.com/dhOGOjO.png)\
+
+After 100 iteration we get a value for theta and then we need to evaluate the cost function J(theta) (the vertical height is the value of J(theta)). \
+The second point here  corresponds to the value of J(theta) for the theta after running gradient descent for 200 iterations.\
+So what this plot is showing is, is it's showing the value of your cost function after each iteration of gradient decent. And if gradient is working properly then J(theta) should decrease after every iteration.\
+It's also possible to come up with automatic convergence test, namely to have a algorithm try to tell you if gradient descent has converged.\
+\
+It's possible to come up with automatic convergence test, namely to have a algorithm try to tell you if gradient descent has converged. 
+Example:\
+Automatic convergence test. Declare convergence if J(θ) decreases by less than E in one iteration, where E is some small value such as 10^−3. However in practice it's difficult to choose this threshold value.\ (Usually choosing what this threshold (here 10^-3) is is pretty difficult.\
+
+Looking at this sort of figure can also tell you, or give you an advance warning, if maybe gradient descent is not working correctly. \
+If you see a figure like this where J(theta) is actually increasing, then that gives you a clear sign that gradient descent is not working:\
+![alt_text](https://i.imgur.com/8Ge1wDF.png)\
+If the learning rate is too big, then gradient descent can instead keep on overshooting the minimum. So that you actually end up getting worse and worse instead of getting to higher values of the cost function J(theta).\
+\
+Sometimes you may also see J(theta) do something like this, it may go down for a while then go up then go down for a while then go up go down for a while go up and so on:\
+![alt_text](https://i.imgur.com/zkYLESS.png)\
+A fix for something like this is also to use a smaller value of alpha.\
+\
+If your learning rate alpha is small enough, then J(theta) should decrease on every iteration. So if this doesn't happen probably means the alpha's too big, you should set it smaller. \
+But of course, you also don't want your learning rate to be too small because if you do that then the gradient descent can be slow to converge.
+\
+Summary:\
+If \α is too small: slow convergence. \
+If \α is too large: J(theta) may not decrease on every iteration and thus may not converge.\
+In order to debug all of these things, often plotting that J(theta) as a function of the number of iterations can help you figure out what's going on.\
+E.g. Try running gradient descent with a range of values for alpha, like 0.001, 0.003, 0.01, 0.03, 0.1, 0,3, 1 ....\
