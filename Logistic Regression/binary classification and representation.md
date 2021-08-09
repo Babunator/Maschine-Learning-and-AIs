@@ -24,3 +24,31 @@ Reading: P(y=1|x;theta) This is the probability (P()) that y is equal to one. Gi
 
 # Decision Boundary 
 
+In order to get our discrete 0 or 1 classification, we can translate the output of the hypothesis function as follows:\
+![alt_text](https://i.imgur.com/qVPjHjC.png)\
+The way our logistic function g behaves is that when its input is greater than or equal to zero, its output is greater than or equal to 0.5:\
+![alt_text](https://i.imgur.com/aS736x2.png)\
+Note:\
+![alt_text](https://i.imgur.com/XEd0mNI.png)\
+So if our input to g is theta^T * X, then that means:\
+![alt_text](https://i.imgur.com/3G9acBW.png)\
+From these statements we can now say:\
+![alt_text](https://i.imgur.com/IyWY8s7.png)\
+The decision boundary is the line that separates the area where y = 0 and where y = 1. It is created by our hypothesis function.\
+
+Example:\
+![alt_text](https://i.imgur.com/rbNXutx.png)\
+Let's suppose we end up choosing the following values for the parameters. theta 0 equals 3, theta 1 equals 1, theta 2 equals 1.\
+We know that y equals one is more likely, that is the probability that y equals one is greater than or equal to 0.5, whenever theta transpose x is greater than zero. \
+![alt_text](https://i.imgur.com/GC7qg7p.png)\
+![alt_text](https://i.imgur.com/1ACs6Pq.png)\
+The green straight line, X1 plus X equals 3. That corresponds to the region where H of X is equal to 0.5 exactly. This is the decision boundary that separates the region where the hypothesis predicts Y equals 1 from the region where the hypothesis predicts that y is equal to zero.
+\
+Example non-linear decision boundarier:\
+We could add extra higher order polynomial terms to the features for logistic regression.\
+![alt_text](https://i.imgur.com/nRVDT4I.png)\
+Hypothesis will predict that y=1 whenever -1 + x1 squared + x2 squared is greater than or equal to 0. This is whenever theta transpose times my theta transfers, my features is greater than or equal to zero.\
+![alt_text](https://i.imgur.com/jWf6hd1.png)\
+If you were to plot the curve for x1 squared plus x2 squared equals 1, that is the equation for circle of radius one, centered around the origin. So that is the decision boundary.\
+![alt_text](https://i.imgur.com/nolvUa6.png)\
+
